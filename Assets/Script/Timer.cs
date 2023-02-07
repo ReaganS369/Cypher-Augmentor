@@ -11,13 +11,27 @@ public class Timer : MonoBehaviour
     public Text timeText;
 
     public GameObject gameOverMenuUI;
+    [SerializeField] private Rigidbody2D rb;
 
     private void Start()
     {
         timerIsRunning = true;
     }
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (timerIsRunning)
+        {
+
+            if (collision.gameObject.CompareTag("Finish"))
+            {
+                timeRemaining = 0;
+                timerIsRunning = false;
+            }
+        }
+    }
+
+    private void Update()
     {
         if (timerIsRunning)
         {
@@ -34,8 +48,8 @@ public class Timer : MonoBehaviour
             }
         }
     }
-
-    void DisplayTime(float timeToDisplay)
+    
+    private void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
