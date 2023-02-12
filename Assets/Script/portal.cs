@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class portal : MonoBehaviour
 {
     public static bool GamePause = false;
-    public AudioSource finishSound;
+    [SerializeField] private AudioSource finishSound;
 
-    public GameObject levelCompleteMenuUI;
+    [SerializeField] private GameObject levelCompleteMenuUI;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
@@ -26,9 +26,4 @@ public class portal : MonoBehaviour
         }
     }
 
-    private void CompleteLevel()
-    {
-        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
 }

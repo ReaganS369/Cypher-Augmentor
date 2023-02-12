@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -120,13 +120,13 @@ TextureImporter:
       name: BottonS_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1080
-        height: 1080
+        x: 15
+        y: 15
+        width: 1050
+        height: 1050
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 50, y: 50, z: 50, w: 50}
       outline: []
       physicsShape: []
       tessellationDetail: 0

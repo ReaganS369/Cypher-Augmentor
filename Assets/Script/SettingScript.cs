@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SettingScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static bool GameBackMenu = false;
 
-    // Update is called once per frame
-    void Update()
+    public void LoadMenu()
     {
-        
+        GameBackMenu = true;
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("Menu");
     }
 }
