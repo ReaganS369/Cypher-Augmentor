@@ -8,11 +8,15 @@ public class portal : MonoBehaviour
     public static bool GamePause = false;
     [SerializeField] private AudioSource finishSound;
 
-    [SerializeField] private GameObject levelCompleteMenuUI;
+    public GameObject levelCompleteMenuUI;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
 
+    private void Start()
+    {
+        levelCompleteMenuUI = GameObject.Find("levelCompleteMenuUI");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Finish"))

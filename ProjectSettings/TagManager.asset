@@ -39,18 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: background
-    uniqueID: 2403593155
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Forground
+  - name: BackGround
     uniqueID: 3670738729
     locked: 0
-  - name: UperrGround
-    uniqueID: 822776393
-    locked: 0
-  - name: player
+  - name: Traps
     uniqueID: 1570363603
+    locked: 0
+  - name: Player
+    uniqueID: 2403593155
+    locked: 0
+  - name: Wall
+    uniqueID: 822776393
     locked: 0

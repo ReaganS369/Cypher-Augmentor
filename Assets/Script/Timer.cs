@@ -6,29 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public float timeRemaining = 10;
     public bool timerIsRunning = false;
-    public Text timeText;
+
+    [SerializeField] private float timeRemaining = 10;
+    [SerializeField] private Text timeText;
 
     public GameObject gameOverMenuUI;
     [SerializeField] private Rigidbody2D rb;
 
     private void Start()
     {
+        gameOverMenuUI = GameObject.Find("gameOverMenuUI");
         timerIsRunning = true;
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (timerIsRunning)
-        {
-
-            if (collision.gameObject.CompareTag("Finish"))
-            {
-                timeRemaining = 0;
-                timerIsRunning = false;
-            }
-        }
     }
 
     private void Update()
@@ -48,7 +38,15 @@ public class Timer : MonoBehaviour
             }
         }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            timerIsRunning = false;
+        }
+    }
+
     private void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
