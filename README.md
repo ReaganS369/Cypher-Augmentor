@@ -1,4 +1,3 @@
 # Cypher-Augmentor
-add up..
 
-UI part cymlakkO(just the script of changes between scenes and bottons)
+A android 2d game moved with the help of calculation results
